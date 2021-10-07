@@ -13,18 +13,16 @@ public class Kata2 {
             data[j] = j;
         }
         
-        Map<Integer, Integer> histogram = new HashMap<Integer, Integer>();
-                      
-        for (int key : data) {
-            histogram.put(key, histogram.containsKey(key) ? histogram.get(key) + 1 : 1);
-        }
+        Histogram histo = new Histogram(data);
         
-        Iterator entries = histogram.entrySet().iterator();
+        Map<Integer, Integer> histogr = histo.getHistogram();
+        
+        Iterator entries = histogr.entrySet().iterator();
         while (entries.hasNext()) {
             Map.Entry entry = (Map.Entry) entries.next();
             Integer key = (Integer)entry.getKey();
             
-            System.out.println(key + "==>" + histogram.get(key));
+            System.out.println(key + "==>" + histogr.get(key));
         } 
     }
     
