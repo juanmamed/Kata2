@@ -7,7 +7,7 @@ import java.util.Map;
 public class Kata2 {
 
     public static void main(String[] args) {
-        int data[] = new int[15];
+        Integer[] data = new Integer[15];
        
         for (int j = 0; j < data.length; j++) {
             data[j] = j;
